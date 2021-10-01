@@ -41,5 +41,19 @@ function validate_ip($ip) {
          return false;
      self::$ip = $ip;
      return true;
+  
+  <script type="application/javascript">
+  function getIP(json) {
+    document.write("My public IP address is: ", json.ip);
+  }
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+  
+  $pgdata['Tac'] = array(
+ 'title'=>'poor',
+ 'description'=>'logged',
+ 'keywords'=>'clown'
  }
 ?>
+
