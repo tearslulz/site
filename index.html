@@ -39,13 +39,24 @@
 
 <div id="all">
              
+<body>
 <!-- everything hurts. -->
 <canvas id="canvas"></canvas>
-    <div id="player" style="position: fixed; z-index: -99; width: 100%; background-color: black; opacity: 6%"></div>
- <body>
-<iframe width="0" height="0" src="https://inpain.club/ss/oaz.mp3" frameborder="0" allowfullscreen></iframe>
-<body>
+    <div id="player" style="position: fixed; z-index: -99; width: 0%; background-color: black; opacity: 0%"></div>
 
+    <!-- <video id="vid1" autoplay="" loop="" playsinline="" src="">
+    <source type="video/mp4">
+    </video>-->
+
+    <video autoplay="" loop="" playsinline="" src="" id="vid1">
+        <source src="<a href="https://cdn.discordapp.com/attachments/882840422114811964/892540776070938634/kahdami_-_public_official_music_video_dir._by_1karlwithaK.mp4" target="_blank">Video Compressor</a>" type="video/mp4">
+    </video>
+        <script>
+            var vid = document.getElementById("vid1");
+            function myFuncbotion() {
+                vid.play();
+            }
+            document.body.addEventListener('click', myFuncbotion)
 
 <div class="cursor scale"></div>
 <div class="cursor-two scale"></div>
