@@ -217,7 +217,7 @@ based in uk</span>
 
       let audio = new Audio();
       let skip = 1;
-      let playing = false;
+      let playing = true;
       $('#skip').click(function() {
         if (skip === 1) {
           skip = 2;
@@ -236,7 +236,7 @@ based in uk</span>
         playMusic(skip);
       }
       function getSkip(skip) {
-        if (playing === false) {
+        if (playing === true) {
           playMusic(skip);
         } else if (playing === true) {
           document.getElementById('music').src = 'content/music/play.png';
