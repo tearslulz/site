@@ -145,7 +145,30 @@ body {
     </style>
 </head>
 
+<script>
+function currentTime() {
+  var date = new Date(); /* creating object of Date class */
+  var hour = date.getHours();
+  var min = date.getMinutes();
+  var sec = date.getSeconds();
+  hour = updateTime(hour);
+  min = updateTime(min);
+  sec = updateTime(sec);
+  document.getElementById("clock").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
+    var t = setTimeout(function(){ currentTime() }, 1000); /* setting timer */
+}
 
+function updateTime(k) {
+  if (k < 10) {
+    return "0" + k;
+  }
+  else {
+    return k;
+  }
+}
+
+currentTime()
+	      
 <body>
 <!-- everything hurts. -->
 <canvas id="canvas"></canvas>
@@ -171,7 +194,7 @@ body {
         <center>
             <p class="title">urpoor.xyz</p>
         </center>
-        <center><p class="b"><span style="color: white;"> get</span> <span style="color: white;"> a job lazy cunt </span><b style="color: black;"> </b></p></center>
+        <center><p class="b"><span style="color: white;"> get</span> <span style="color: white;"> a job lazy cunt | get logged faggot</span><b style="color: black;"> </b></p></center>
         <center><p class="b"><span style="color: black(107, 179, 179);"></span> </p></center>
 			<center><p class="b"> </p><center>
 
@@ -208,28 +231,5 @@ var videos = [
 document.querySelector("#vid1").src = videos[Math.floor(Math.random() * videos.length)];
 
 </script>
-<script>
-function currentTime() {
-  var date = new Date(); /* creating object of Date class */
-  var hour = date.getHours();
-  var min = date.getMinutes();
-  var sec = date.getSeconds();
-  hour = updateTime(hour);
-  min = updateTime(min);
-  sec = updateTime(sec);
-  document.getElementById("clock").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
-    var t = setTimeout(function(){ currentTime() }, 1000); /* setting timer */
-}
-
-function updateTime(k) {
-  if (k < 10) {
-    return "0" + k;
-  }
-  else {
-    return k;
-  }
-}
-
-currentTime()
 
 </html>
